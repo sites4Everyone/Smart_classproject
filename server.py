@@ -15,6 +15,16 @@ def my_link():
   contents=f.read()
   return (contents,'Attendance Taken')
 
+
+@app.route('/Attentiveness.py')
+def my_link3():
+  import Attentiveness
+  cwd=os.getcwd()
+  path=os.path.join('convert.txt')
+  f=open(path,'r')
+  contents=f.read()
+  return (contents)
+
 @app.route('/index.html')
 def my_link2():
   return render_template('/index.html')
