@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SMART CLASS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta16/shoelace.css">
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <hr>
+            <!-- <h3>Take Attendance        Monitor Attentiveness      View Progress Reports</h3> -->
+
+            <button style="background-color:royalblue;" id="attendance-record-btn" title="Take Attendance"><a href="/attendance/attendance.py">Take Attendance</a></button>
+            <button style="background-color:royalblue;" id="attentiveness-record-btn" title="Detect Attentiveness">Detect Attentiveness</button>
+            <button style="background-color:royalblue;" id="report-card-bttn" title="Report Cards">Report Cards</button> 
+            <hr>
+
+            <h3>Voice Controlled Notes Section</h3>
+            
+            <div class="app"> 
+                <h4>Add New Note</h4>
+                <div class="input-single">
+                    <textarea id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="6"></textarea>
+                </div>         
+                <button style="background-color:royalblue;" id="start-record-btn" title="Start Recording">Start Recognition</button>
+                <button style="background-color:royalblue;" id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
+                <button style="background-color:royalblue;" id="save-note-btn" title="Save Note">Save Note</button>   
+                <p id="recording-instructions">Press the <strong>Start Recognition</strong> button. Allow access to microphone recording.</p>
+                
+                <h4>All your Notes</h4>
+                <ul id="notes">
+                    <li>
+                        <p class="no-notes">You don't have any notes.</p>
+                    </li>
+                </ul>
+
+            </div>
+              
+            <hr>
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="transcript_script.js"></script>
+
+        
+
+    </body>
+</html>
