@@ -1,6 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,send_from_directory
 import os
-app = Flask(__name__)
+app = Flask(__name__,static_folder="/static")
 
 @app.route('/')
 def index():
@@ -8,10 +8,17 @@ def index():
 
 @app.route('/attendance/attendance.py')
 def my_link():
-  print ('Attendance Taken')
-
   from attendance import attendance
-  return ('Done')
+  cwd=os.getcwd()
+  path=os.path.join(cwd,'attendance','Attendance.txt')
+  f=open(path,'r')
+  contents=f.read()
+  return (contents,'Attendance Taken')
+
+@app.route('/index.html')
+def my_link2():
+  return render_template('/index.html')
+
   
   # cwd=os.getcwd()
   # path=os.path.join(cwd,'attendance','attendance.py')
