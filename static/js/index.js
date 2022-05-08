@@ -5,12 +5,12 @@ function result(){
             physics: "80",
             literature: "75",
         },
-        DAVID: {
+        OBAMA: {
             math: "95",
             physics: "80",
             literature: "75",
         },
-        ALIA: {
+        ELON: {
             math: "95",
             physics: "80",
             literature: "75",

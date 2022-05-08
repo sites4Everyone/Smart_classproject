@@ -1,4 +1,4 @@
-from flask import Flask, render_template,send_from_directory
+from flask import Flask, render_template,send_from_directory,redirect
 import os
 app = Flask(__name__,static_folder="/static")
 
@@ -11,6 +11,7 @@ def my_link():
   from attendance import attendance
   cwd=os.getcwd()
   path=os.path.join(cwd,'attendance','Attendance.txt')
+  print(path)
   f=open(path,'r')
   contents=f.read()
   return (contents,'Attendance Taken')
