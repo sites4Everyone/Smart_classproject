@@ -14,7 +14,7 @@ def my_link():
   print(path)
   f=open(path,'r')
   contents=f.read()
-  return (contents,'Attendance Taken')
+  return (contents)
 
 
 @app.route('/Attentiveness.py')
